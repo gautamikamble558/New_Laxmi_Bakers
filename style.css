@@ -1,0 +1,179 @@
+/* -----------------------------
+   RESET + BASE
+   ----------------------------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color: #333;
+  background-color: #fff8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -----------------------------
+   HEADER (shared)
+   ----------------------------- */
+header {
+  background-color: #d2691e;
+  color: #fff;
+  padding: 18px 20px;
+  text-align: center;
+}
+header h1 { font-size: 1.6rem; margin-bottom: 8px; }
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* -----------------------------
+   HERO (Home) - full screen background
+   ----------------------------- */
+.hero {
+  /* background image used only on Home page */
+  background-image: url('images/home-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  min-height: 100vh;    /* full viewport height */
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: flex-start; /* left align text */
+  padding: 0 60px;
+  flex: 1; /* allows footer to stay at bottom */
+}
+
+/* subtle dark overlay so text is readable */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  color: #fff;      /* text color over image */
+  text-align: left;
+}
+.hero-content h2 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* -----------------------------
+   ABOUT HERO (About page full-screen background)
+   ----------------------------- */
+.about-hero {
+  background-image: url('images/about-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  min-height: 100vh; /* full screen */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the text on the page */
+  padding: 0 40px;
+  flex: 1;
+}
+
+/* dark overlay on about page */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 900px;
+  text-align: center;
+  padding: 28px;
+  border-radius: 10px;
+  /* optional: slightly translucent background for readability */
+  background: rgba(0,0,0,0.25);
+}
+.about-content h2 { font-size: 2.4rem; margin-bottom: 14px; }
+.about-content p { font-size: 1.05rem; line-height: 1.6; margin-bottom: 12px; }
+
+/* -----------------------------
+   FOOTER (sticky to bottom)
+   ----------------------------- */
+footer {
+  background-color: #d2691e;
+  color: #fff;
+  text-align: center;
+  padding: 12px 10px;
+  margin-top: auto; /* pushes footer to the bottom */
+  font-size: 0.95rem;
+}
+
+/* small screens responsive */
+@media (max-width: 700px) {
+  .hero-content h2 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
+  .about-content h2 { font-size: 1.6rem; }
+  .about-content p { font-size: 0.95rem; }
+  header nav ul { gap: 10px; font-size: 0.95rem; }
+  .hero, .about-hero { padding: 0 18px; }
+}
+
+
+
+/* About Page Hero Section */
+.about-hero {
+    background-image: url('images/about-bg.jpg'); /* change to your image path */
+    background-size: contain;    /* shows full image without cutting */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;     /* fills empty space if aspect ratio differs */
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.about-content {
+    background: rgba(0, 0, 0, 0.5); /* transparent black box for readability */
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    max-width: 800px;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+

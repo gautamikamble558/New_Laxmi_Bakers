@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact - New Laxmi Bakers</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      color: #fff; /* all text white by default */
+    }
+
+    body.contact-page {
+      background-image: url('images/contact-bg.jpg'); /* full-screen background */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      flex: 1;
+    }
+
+    body.contact-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4); /* dark overlay for readability */
+      z-index: 0;
+    }
+
+    header {
+      background-color: #d2691e; /* brown header like home page */
+      color: #fff;
+      padding: 18px 20px;
+      text-align: center;
+      z-index: 2;
+    }
+
+    header h1 { font-size: 1.6rem; margin-bottom: 8px; }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1; /* above overlay */
+    }
+
+    .contact-card {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(0,0,0,0.5); /* semi-transparent dark card */
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .contact-card h2 {
+      color: #fff; /* heading white */
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-card p {
+      color: #fff; /* text white */
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background-color: #d2691e; /* brown footer like home page */
+      color: #fff;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 0.95rem;
+      z-index: 2;
+    }
+
+    @media screen and (max-width: 600px) {
+      .contact-card {
+        width: 90%;
+        padding: 20px;
+      }
+      .contact-card h2 { font-size: 2rem; }
+      .contact-card p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body class="contact-page">
+  <header>
+    <h1>New Laxmi Bakers</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="login_page.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-card">
+      <h2>Contact New Laxmi Bakers</h2>
+      <p><strong>Address:</strong> Dasara Chowk, near New Laxmi Bakers and Sweets, Gadhinglaj, Maharashtra 416502.</p>
+      <p><strong>📞Contact:</strong> +91 9809571101‬</p>
+      <p><strong>Hours:</strong> Typically open from 8 AM to 10 PM on all days.</p>
+      <p><strong>Email:</strong> contact@newlaxmibakers.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 New Laxmi Bakers. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - New Laxmi Bakers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.login-page {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background-image: url('images/login_page-bg.jpg'); /* ✅ background visible now */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+      position: relative;
+    }
+
+    /* dark overlay */
+    body.login-page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 0;  /* keep it behind */
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;  /* bring them above overlay */
+    }
+
+    header {
+      background-color: #d2691e;
+      color: #fff;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    header h1 { font-size: 1.6rem; margin-bottom: 8px; }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .login-card {
+      background: rgba(255, 182, 193, 0.6); /* ✅ light pink transparent */
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      color: #333;
+    }
+
+    .login-card h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .login-card label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .login-card input[type="text"],
+    .login-card input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .login-card input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    .login-card button {
+      background-color: #d2691e;
+      border: none;
+      padding: 14px 20px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .login-card button:hover {
+      background-color: #b5531a;
+      transform: scale(1.02);
+    }
+
+    .login-card .options {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .login-card .options a {
+      color: #d2691e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #d2691e;
+      color: #fff;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body class="login-page">
+  <header>
+    <h1>New Laxmi Bakers</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="login_page.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="login-card">
+      <h2>Login</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+        <button type="submit">Login</button>
+
+        <div class="options">
+          <label><input type="checkbox" name="remember"> Remember Me</label><br>
+          <a href="#">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 New Laxmi Bakers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
